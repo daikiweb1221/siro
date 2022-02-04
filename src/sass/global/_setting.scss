@@ -12,13 +12,12 @@ $padding-pc: 25px;
 $padding-sp: 20px;
 // ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
 
-
 ////////////////////
 // フォント設定
 ////////////////////
 
-$base-font-family: "";
-$second-font-family: "";
+$base-font-family: "Hiragino Kaku Gothic Pro";
+$second-font-family: "Poppins", sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
@@ -28,6 +27,7 @@ body {
 // フォントウェイト
 $regular: 300;
 $normal: 400;
+$semi-bold: 600;
 $bold: 700;
 
 ////////////////////
@@ -37,7 +37,7 @@ $bold: 700;
 //色指定（共通性のあるものは出来る限り指定すると良い）
 $black: #111;
 $white: #fff;
-
+$musk: #7a7a7a;
 
 ////////////////////
 // メディアクエリとブレークポイントの設定
@@ -45,15 +45,16 @@ $white: #fff;
 
 //ブレイクポイント
 $breakpoints: (
+  at: 375,
   sm: 600,
   md: 768,
   lg: 1024,
   xl: 1440,
 );
 
-
 //メディアクエリー
 $mediaquerys: (
+  at: "screen and (min-width: #{map-get($breakpoints,'at')}px)",
   sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
   md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
   lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
@@ -71,7 +72,6 @@ $mediaquerys: (
 @function rem($pixels) {
   @return math.div($pixels, 16) * 1rem;
 }
-
 
 ////////////////////
 // 非表示設定

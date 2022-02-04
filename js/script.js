@@ -47,4 +47,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
+  // ハンバーガー
+  $(".js-humburger").click(function () {//ボタンがクリックされたら
+    $(this).toggleClass('js-active');//ボタン自身に activeクラスを付与し
+      $(".js-gnav").toggleClass('js-panelactive');//ナビゲーションにpanelactiveクラスを付与
+  });
+  
+  $(".p-gnav a").click(function () {//ナビゲーションのリンクがクリックされたら
+      $(".js-humburger").removeClass('js-active');//ボタンの activeクラスを除去し
+      $(".js-gnav").removeClass('js-panelactive');//ナビゲーションのpanelactiveクラスも除去
+  });
+
 });

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  font-family: "";
+  font-family: "Hiragino Kaku Gothic Pro";
 }
 
 .u-desktop {
@@ -195,8 +195,229 @@ select::-ms-expand {
   color: #fff;
 }
 
+.p-gnav {
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position: fixed;
+  z-index: 999;
+  /*ナビのスタート位置と形状*/
+  top: 0;
+  right: -120%;
+  width: 40%;
+  height: 100vh;
+  /*ナビの高さ*/
+  background: #999;
+  /*動き*/
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+.p-gnav.js-panelactive {
+  right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+.p-gnav.js-panelactive .p-gnav__list {
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999;
+  width: 40%;
+  height: 100vh;
+  /*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+.p-gnav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/*リストのレイアウト設定*/
+.p-gnav li {
+  list-style: none;
+  text-align: center;
+}
+
+.p-gnav li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.p-header__logo {
+  margin: 20.5px 15px;
+  margin: 1.28125rem 0.9375rem;
+}
+
+.p-header__logo h1 img {
+  width: 66px;
+  width: 4.125rem;
+  height: 25px;
+  height: 1.5625rem;
+}
+
+.p-mv__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 12;
+}
+
+.p-main-title__logo img {
+  width: 158.5px;
+  width: 9.90625rem;
+  height: 64.5px;
+  height: 4.03125rem;
+}
+
+.p-main-title__text {
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0.96px;
+  letter-spacing: 0.06rem;
+  text-align: center;
+  padding-top: 20px;
+  padding-top: 1.25rem;
+}
+@media screen and (min-width: 375px) {
+  .p-main-title__text {
+    font-size: 0.75rem;
+  }
+}
+
+.p-mv {
+  position: relative;
+}
+
+.p-mv__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.p-mv__img::before {
+  content: "";
+  display: block;
+  padding-top: 94.6666666667%;
+}
+
+.p-mv__img::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(122, 122, 122, .2);
+  z-index: 11;
+}
+
+.p-mv__img picture img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
 .p-napo {
   color: #fff;
   background-color: #111;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.c-humburger {
+  /*ボタン内側の基点となるためrelativeを指定。
+  追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+  position: fixed;
+  top: 15px;
+  top: 0.9375rem;
+  right: 15px;
+  right: 0.9375rem;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+/*ボタン内側*/
+.c-humburger span {
+  display: inline-block;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  width: 45%;
+}
+
+.c-humburger span:nth-of-type(1) {
+  top: 15px;
+}
+
+.c-humburger span:nth-of-type(2) {
+  top: 23px;
+}
+
+.c-humburger span:nth-of-type(3) {
+  top: 31px;
+}
+
+/*activeクラスが付与されると
+線と周りのエリアが回転して×になる*/
+.c-humburger.js-active .c-humburger__area {
+  -webkit-transform: rotateY(-360deg);
+          transform: rotateY(-360deg);
+}
+
+.c-humburger.js-active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  -webkit-transform: translateY(6px) rotate(-135deg);
+          transform: translateY(6px) rotate(-135deg);
+  width: 30%;
+}
+
+.c-humburger.js-active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.c-humburger.js-active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  -webkit-transform: translateY(-6px) rotate(135deg);
+          transform: translateY(-6px) rotate(135deg);
+  width: 30%;
+}
+
+.l-header {
+  position: fixed;
+  z-index: 999;
 }
 /*# sourceMappingURL=styles.css.map */

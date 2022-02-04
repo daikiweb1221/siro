@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.p-mv {
+  position: relative;
+}
+
+.p-mv__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.p-mv__img::before {
+  content: "";
+  display: block;
+  padding-top: 94.6666666666667%;
+}
+
+.p-mv__img::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $musk, $alpha: 0.2);
+  z-index: 11;
+}
+
+.p-mv__img picture img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
