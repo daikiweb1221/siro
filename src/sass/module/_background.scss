@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.background {
+  background: linear-gradient(
+    180deg,
+    $white 0%,
+    $white 70%,
+    $background 70%,
+    $background 100%
+  );
+}

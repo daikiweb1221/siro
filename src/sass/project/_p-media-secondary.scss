@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.p-media-secondary .p-media__img {
+  position: relative;
+  max-width: rem(295);
+  width: 100%;
+  margin-top: rem(80);
+}
+
+.p-media-secondary .p-media__img::before {
+  content: "";
+  display: block;
+  padding-top: 132.2033898305085%;
+}
+
+.p-media-secondary .p-media__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
