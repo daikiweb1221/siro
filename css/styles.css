@@ -552,7 +552,7 @@ select::-ms-expand {
   width: 40%;
   height: 100vh;
   /*ナビの高さ*/
-  background: #999;
+  background: rgba(255, 255, 255, .6);
   /*動き*/
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
@@ -582,6 +582,7 @@ select::-ms-expand {
   z-index: 999;
   top: 50%;
   left: 50%;
+  width: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -590,16 +591,23 @@ select::-ms-expand {
 .p-gnav li {
   list-style: none;
   text-align: center;
+  display: block;
+  width: 100%;
 }
 
 .p-gnav li a {
-  color: #333;
+  display: block;
+  width: 100%;
+  color: #111;
   text-decoration: none;
   padding: 10px;
+  padding: 0.625rem;
   display: block;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 1.2px;
+  letter-spacing: 0.075rem;
   font-weight: bold;
+  font-family: "Poppins", sans-serif;
 }
 
 .p-header__logo {

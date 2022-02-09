@@ -1,7 +1,5 @@
 @use "global" as *;
 
-
-
 .p-gnav {
   /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
   position: fixed;
@@ -11,23 +9,23 @@
   right: -120%;
   width: 40%;
   height: 100vh; /*ナビの高さ*/
-  background: #999;
+  background: rgba($color: $white, $alpha: 0.6);
   /*動き*/
   transition: all 0.6s;
 }
 
 /*アクティブクラスがついたら位置を0に*/
-.p-gnav.js-panelactive{
+.p-gnav.js-panelactive {
   right: 0;
 }
 
 /*ナビゲーションの縦スクロール*/
-.p-gnav.js-panelactive .p-gnav__list{
+.p-gnav.js-panelactive .p-gnav__list {
   /*ナビの数が増えた場合縦スクロール*/
   position: fixed;
-  z-index: 999; 
+  z-index: 999;
   width: 40%;
-  height: 100vh;/*表示する高さ*/
+  height: 100vh; /*表示する高さ*/
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -37,24 +35,30 @@
   /*ナビゲーション天地中央揃え*/
   position: absolute;
   z-index: 999;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
 }
 
 /*リストのレイアウト設定*/
 
-.p-gnav li{
-list-style: none;
+.p-gnav li {
+  list-style: none;
   text-align: center;
+  display: block;
+  width: 100%;
 }
 
-.p-gnav li a{
-color: #333;
-text-decoration: none;
-padding:10px;
-display: block;
-text-transform: uppercase;
-letter-spacing: 0.1em;
-font-weight: bold;
+.p-gnav li a {
+  display: block;
+  width: 100%;
+  color: $black;
+  text-decoration: none;
+  padding: rem(10);
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: rem(1.2);
+  font-weight: bold;
+  font-family: $second-font-family;
 }
