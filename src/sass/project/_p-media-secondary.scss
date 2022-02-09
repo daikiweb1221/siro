@@ -4,13 +4,34 @@
   position: relative;
   max-width: rem(295);
   width: 100%;
-  margin-top: rem(80);
+  margin-top: rem(59);
+  @include mq(md) {
+    max-width: rem(420);
+    margin-top: rem(-435);
+  }
 }
+
+.p-media-secondary--pc .p-media__img {
+  position: relative;
+  max-width: rem(295);
+  width: 100%;
+  margin-top: rem(59);
+  @include mq(md) {
+    max-width: rem(420);
+    margin-top: rem(-200);
+  }
+}
+
+
+
 
 .p-media-secondary .p-media__img::before {
   content: "";
   display: block;
-  padding-top: 132.2033898305085%;
+  padding-top: 135.5932203389831%;
+  @include mq(md) {
+    padding-top: 150%;
+  }
 }
 
 .p-media-secondary .p-media__img img {

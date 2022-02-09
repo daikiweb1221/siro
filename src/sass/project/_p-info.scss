@@ -1,5 +1,57 @@
 @use "global" as *;
 
 .p-info__text {
-  margin-top: rem(28.5);
+  margin-top: rem(25.5);
+  @include mq(md) {
+    margin-top: rem(31.5);
+  }
+}
+
+.p-info__access {
+  padding-top: rem(8);
+  margin-top: rem(6);
+}
+
+.p-info__img {
+  margin-top: rem(35);
+  width: 100%;
+  position: relative;
+  @include mq(md) {
+    max-width: rem(500);
+  }
+}
+
+.p-info__img::before {
+  @include mq(md) {
+    content: "";
+    display: block;
+    padding-top: 66%;
+  }
+}
+
+.p-info__img img {
+  @include mq(md) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.p-info__block {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    margin-top: rem(25);
+  }
+}
+
+.p-info__body {
+  @include mq(md) {
+    margin-left: rem(39);
+  }
 }

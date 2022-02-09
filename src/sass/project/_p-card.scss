@@ -3,12 +3,33 @@
 .p-card__img {
   position: relative;
   width: 100%;
-  margin-top: rem(40);
+  margin-top: rem(33);
+  @include mq(md) {
+    margin-top: initial;
+  }
 }
+
+.p-card-even .p-card__img {
+  margin-top: rem(42);
+  @include mq(md) {
+    margin-top: initial;
+  }
+}
+
+.p-card-last .p-card__img {
+  margin-top: rem(45);
+  @include mq(md) {
+    margin-top: initial;
+  }
+}
+
 .p-card__img::before {
   content: "";
   display: block;
   padding-top: 62.7536231884058%;
+  @include mq(md) {
+    padding-top: 133.3333333333333%;
+  }
 }
 .p-card__img img {
   position: absolute;
@@ -26,7 +47,12 @@
   color: $title;
   font-size: rem(23);
   letter-spacing: rem(0.92);
-  margin-top: rem(18.5);
+  margin-top: rem(7.5);
+  @include mq(md) {
+    font-size: rem(30);
+    letter-spacing: rem(0.6);
+    margin-top: rem(15.5);
+  }
 }
 
 .p-card__text {
@@ -34,7 +60,13 @@
   color: $black;
   letter-spacing: rem(1.92);
   line-height: 1.75;
+  margin-top: rem(4);
   @include mq(at) {
     font-size: rem(12);
+  }
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: rem(1.28);
+    line-height: 1.96875;
   }
 }

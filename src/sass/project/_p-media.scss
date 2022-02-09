@@ -2,14 +2,21 @@
 
 .p-media__img {
   position: relative;
-  max-width: rem(295);
   width: 100%;
-  margin-top: rem(80);
+  margin-top: rem(32);
 }
+
+
+
+
+
 .p-media__img::before {
   content: "";
   display: block;
   padding-top: 100%;
+  @include mq(md) {
+    padding-top: 97.8571428571429%;
+  }
 }
 .p-media__img img {
   position: absolute;
@@ -27,7 +34,11 @@
   color: $title;
   font-size: rem(23);
   letter-spacing: rem(0.92);
-  margin-top: rem(18.5);
+  margin-top: rem(11.5);
+  @include mq(md) {
+    font-size: rem(30);
+    letter-spacing: rem(0.6);
+  }
 }
 
 .p-media__text {
@@ -35,7 +46,13 @@
   color: $black;
   letter-spacing: rem(1.92);
   line-height: 1.75;
+  margin-top: rem(5);
   @include mq(at) {
     font-size: rem(12);
+  }
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: rem(1.28);
+    line-height: 1.96875;
   }
 }

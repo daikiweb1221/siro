@@ -2,11 +2,16 @@
 
 .p-header__logo {
   margin: rem(20.5) rem(15);
+  @include mq(md) {
+    margin: rem(44) rem(160);
+  }
 }
 
 .p-header__logo h1 img {
   width: rem(66);
   height: rem(25);
+  @include mq(md) {
+    width: rem(89);
+    height: rem(35);
+  }
 }
-
-

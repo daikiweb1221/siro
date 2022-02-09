@@ -13,6 +13,9 @@
   content: "";
   display: block;
   padding-top: 94.6666666666667%;
+  @include mq(md) {
+    padding-top: 48.4375%;
+  }
 }
 
 .p-mv__img::after {
@@ -37,4 +40,3 @@
   width: 100%;
   height: 100%;
 }
-

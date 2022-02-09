@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.c-btn {
+  display: inline-block;
+  position: relative;
+  max-width: rem(209);
+  width: 100%;
+  text-align: center;
+  font-size: rem(12);
+  letter-spacing: rem(1.92);
+  color: $black;
+  padding: rem(15) rem(5);
+  background-color: $white;
+  border: 1px solid $border;
+  transition: all 0.3s;
+  @include mq(at) {
+    font-size: rem(12);
+  }
+  @include mq(md) {
+    max-width: rem(352);
+    padding: rem(20) 0;
+    font-size: rem(20);
+    letter-spacing: rem(1.6);
+  }
+}
+
+.c-btn:hover {
+  background-color: lemonchiffon;
+  transition: all 0.3s;
+}
+
+.c-btn::before {
+  content: "";
+  background-image: url(../images/common/mail@2x.svg);
+  width: rem(20);
+  height: rem(14.5);
+  position: absolute;
+  top: rem(18);
+  left: rem(35);
+  z-index: 2;
+  background-position: center center;
+  background-size: cover;
+  @include mq(md) {
+    width: rem(31);
+    height: rem(22);
+    top: rem(25);
+    left: rem(64);
+  }
+}

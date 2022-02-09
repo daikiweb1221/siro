@@ -8,4 +8,13 @@
     $background 70%,
     $background 100%
   );
+  @include mq(md) {
+    background: linear-gradient(
+    180deg,
+    $white 0%,
+    $white 65%,
+    $background 65%,
+    $background 100%
+  );
+  }
 }

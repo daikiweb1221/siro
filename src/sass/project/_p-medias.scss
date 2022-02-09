@@ -3,4 +3,7 @@
 .p-medias__item {
   max-width: rem(295);
   width: 100%;
+  @include mq(md) {
+    max-width: rem(420);
+  }
 }

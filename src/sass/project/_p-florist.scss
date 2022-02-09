@@ -1,5 +1,40 @@
 @use "global" as *;
 
+.p-florist__title {
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}
+
 .p-florist__text {
-  margin-top: rem(28.5);
+  margin-top: rem(24.5);
+  @include mq(md) {
+    margin-top: rem(33.5);
+  }
+}
+
+.p-florist__bg {
+  background: linear-gradient(
+    180deg,
+    #ededed 0%,
+    #ededed 20%,
+    #fff 20%,
+    #fff 100%
+  );
+  padding-top: rem(66);
+  @include mq(md) {
+    background: linear-gradient(
+      180deg,
+      #ededed 0%,
+      #ededed 60%,
+      #fff 60%,
+      #fff 100%
+    );
+  }
+}
+
+.p-florist__cards {
+  @include mq(md) {
+    margin-top: rem(61);
+  }
 }

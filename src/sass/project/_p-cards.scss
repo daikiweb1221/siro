@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.p-cards {
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.p-cards__item {
+  @include mq(md) {
+    max-width: calc(100% / 3 - #{rem(30)} * 2 / 3);
+    width: 100%;
+  }
+}
+
+.p-cards__item + .p-cards__item {
+  @include mq(md) {
+    margin-left: rem(30);
+  }
+}
+
+.p-cards__item {
+  &:nth-child(3n + 1) {
+    @include mq(md) {
+      margin-left: initial;
+    }
+  }
+}

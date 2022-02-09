@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.p-access {
+  display: flex;
+}
+
+.p-access__title {
+  font-size: rem(12);
+  color: $black;
+  letter-spacing: rem(1.92);
+  max-width: rem(87);
+  width: 100%;
+  border-right: 1px solid $border;
+  @include mq(at) {
+    font-size: rem(12);
+  }
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: rem(1.28);
+  }
+}
+
+.p-access__desc {
+  font-size: rem(12);
+  color: $black;
+  letter-spacing: rem(1.92);
+  line-height: 1.75;
+  padding-left: rem(10.5);
+  @include mq(at) {
+    font-size: rem(12);
+  }
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: rem(1.28);
+  }
+}

@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.p-footer {
+  text-align: center;
+  padding: rem(21) 0;
+}
+.p-footer small {
+  font-size: rem(11);
+  color: $black;
+  letter-spacing: rem(1.76);
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: rem(1.28);
+  }
+}

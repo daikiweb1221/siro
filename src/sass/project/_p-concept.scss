@@ -1,13 +1,16 @@
 @use "global" as *;
 
 .p-concept__text {
-  margin-top: rem(51);
+  margin-top: rem(24);
 }
 
 .p-concept__img {
   position: relative;
   width: 100%;
-  margin-top: rem(80);
+  margin-top: rem(35);
+  @include mq(md) {
+    margin-top: rem(66);
+  }
 }
 
 .p-concept__img::before {
@@ -28,5 +31,8 @@
 }
 
 .p-concept__background {
-  padding-bottom: rem(40);
+  padding-bottom: rem(36);
+  @include mq(md) {
+    padding-bottom: rem(114);
+  }
 }

@@ -7,13 +7,17 @@
   letter-spacing: rem(1.24);
   font-weight: $bold;
   text-align: center;
+  @include mq(md) {
+    font-size: rem(40);
+    letter-spacing: rem(0.8);
+  }
 }
 
 .c-section-title::after {
   content: "";
   display: block;
-  width: 22px;
+  width: 26px;
   height: 1px;
   background-color: $title;
-  margin: 10px auto 0 auto;
+  margin: 15px auto 0 auto;
 }
